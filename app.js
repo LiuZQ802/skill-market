@@ -419,7 +419,7 @@
 
   /* ---------- 启动 ---------- */
   $("#grid").replaceChildren(...Array.from({ length: 6 }, () => el("div", { class: "skeleton" })));
-  fetch("data/items.json").then(r => { if (!r.ok) throw 0; return r.json(); })
+  fetch("data/items.json", { cache: "no-cache" }).then(r => { if (!r.ok) throw 0; return r.json(); })
     .then(d => { base = d; ui.type = types()[0]?.id || "skill"; if (location.hash === "#rank") ui.cat = RANK; const hq = location.hash.match(/^#q=(.*)$/); if (hq) { ui.q = decodeURIComponent(hq[1]); $("#q").value = ui.q; } render(); loadCounts(); })
     .catch(() => { $("#grid").replaceChildren(); $("#empty").hidden = false;
       $("#empty").querySelector(".empty__title").textContent = "预置数据加载失败";
