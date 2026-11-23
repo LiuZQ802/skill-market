@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Skill 超市</title>
-  <meta name="description" content="我的常用 Skill 市场：分类浏览，一键复制原始链接。">
+  <title>常用工具超市</title>
+  <meta name="description" content="我的常用工具超市：按类型和分类浏览，一键复制链接，查看使用排行。">
   <link rel="stylesheet" href="style.css">
   <script>
     // 首屏前设置主题，避免闪烁
@@ -17,14 +17,14 @@
 <body>
   <header class="topbar">
     <div class="topbar__inner">
-      <a class="brand" href="./" aria-label="Skill 超市">Skill 超市</a>
+      <a class="brand" href="./" aria-label="常用工具超市">常用工具超市</a>
       <nav class="tabs" id="typeTabs" aria-label="内容类型"></nav>
       <label class="search">
         <span class="sr-only">搜索</span>
-        <input id="q" type="search" placeholder="搜索名称、描述或分类  (按 / 聚焦)" autocomplete="off">
+        <input id="q" type="search" placeholder="搜索名称、简介或分类（按 / 聚焦）" autocomplete="off">
       </label>
       <div class="topbar__actions">
-        <button class="btn btn--primary" id="addBtn" type="button">添加 Skill</button>
+        <button class="btn btn--primary" id="addBtn" type="button">添加</button>
         <button class="btn" id="moreBtn" type="button" aria-haspopup="menu" aria-expanded="false">数据</button>
         <button class="btn btn--icon" id="themeBtn" type="button" aria-label="切换明暗主题">主题</button>
       </div>
@@ -51,7 +51,7 @@
       <div class="grid" id="grid" aria-live="polite"></div>
       <div class="empty" id="empty" hidden>
         <p class="empty__title">这里还没有内容</p>
-        <p class="muted">换个关键词，或者点击右上角“添加 Skill”粘贴一个 GitHub 链接。</p>
+        <p class="muted">换个关键词，或者点击右上角“添加”粘贴一个链接。</p>
       </div>
     </main>
   </div>
@@ -59,12 +59,12 @@
   <!-- 添加 / 编辑 -->
   <dialog id="dlg">
     <form method="dialog" id="form" novalidate>
-      <h2 id="dlgTitle">添加 Skill</h2>
+      <h2 id="dlgTitle">添加</h2>
 
       <div class="field">
-        <label for="fUrl">GitHub 链接</label>
-        <input id="fUrl" required placeholder="https://github.com/owner/repo/tree/main/skills/my-skill" autocomplete="off">
-        <p class="help" id="urlHelp">支持 blob / tree / raw 链接，会自动转成原始 SKILL.md 链接。</p>
+        <label for="fUrl">链接</label>
+        <input id="fUrl" required placeholder="https://github.com/owner/repo/tree/main/skills/my-skill 或任意网址" autocomplete="off">
+        <p class="help" id="urlHelp">粘贴链接后会自动识别。</p>
       </div>
 
       <div class="row">
@@ -85,7 +85,7 @@
 
       <div class="field">
         <label for="fDesc">简介</label>
-        <textarea id="fDesc" rows="3" placeholder="一句话说明它能做什么"></textarea>
+        <textarea id="fDesc" rows="3" placeholder="一句话说清它做什么、什么时候用"></textarea>
       </div>
 
       <p class="field-error" id="formError" role="alert" hidden></p>
@@ -98,6 +98,7 @@
   </dialog>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="config.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

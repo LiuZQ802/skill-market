@@ -1,50 +1,72 @@
-// 生成 data/skills.json 的预置数据。运行: node scripts/build-seed.mjs
-import { writeFileSync } from "node:fs";
+// 从 GitHub 收藏的 skill 仓库生成 data/items.json(需已登录 gh)。运行: node scripts/build-seed.mjs
+import { writeFileSync, readFileSync } from "node:fs";
+const DESCS = JSON.parse(readFileSync(new URL("./descs.json", import.meta.url), "utf8"));
+import { execFileSync } from "node:child_process";
 
+const types = [{ id: "skill", name: "Skills", noun: "Skill" }];
 const categories = [
-  { id: "writing", name: "写作" },
-  { id: "research", name: "科研" },
-  { id: "docs", name: "PPT 与文档" },
-  { id: "design", name: "设计" },
-  { id: "dev", name: "开发" },
+  { id: "writing", name: "写作", type: "skill" },
+  { id: "research", name: "科研", type: "skill" },
+  { id: "ppt", name: "PPT", type: "skill" },
+  { id: "design", name: "设计", type: "skill" },
+  { id: "plot", name: "绘图", type: "skill" },
 ];
 
-const A = "anthropics/skills", K = "K-Dense-AI/claude-scientific-skills", T = "Leonxlnx/taste-skill";
-const s = (repo, dir, name, category, desc) => ({
-  id: `${repo.split("/")[1]}-${name}`, type: "skill", name, category, desc,
-  repo, url: `https://raw.githubusercontent.com/${repo}/main/${dir}/${name}/SKILL.md`,
-});
-
-const skills = [
-  s(A, "skills", "doc-coauthoring", "writing", "与 Claude 分阶段共同撰写文档、提案、技术规范。"),
-  s(A, "skills", "internal-comms", "writing", "撰写周报、公告、FAQ、项目更新等内部沟通材料。"),
-  s(K, "skills", "scientific-writing", "writing", "撰写科研论文的结构、段落与引用规范。"),
-  s(K, "skills", "literature-review", "research", "系统性文献检索、筛选与综述撰写。"),
-  s(K, "skills", "citation-management", "research", "管理参考文献，生成并校验 BibTeX 与引用格式。"),
-  s(K, "skills", "peer-review", "research", "以审稿人视角审阅论文，给出结构化意见。"),
-  s(K, "skills", "hypothesis-generation", "research", "基于已有证据提出并梳理可检验的研究假设。"),
-  s(K, "skills", "scientific-critical-thinking", "research", "评估研究设计、证据强度与潜在偏倚。"),
-  s(K, "skills", "statistical-analysis", "research", "选择统计方法，完成检验、效应量与结果报告。"),
-  s(K, "skills", "research-grants", "research", "撰写基金申请书，对齐评审标准与预算说明。"),
-  s(K, "skills", "paper-lookup", "research", "按主题或标题检索论文并核对元数据。"),
-  s(K, "skills", "scholar-evaluation", "research", "对学术工作做结构化质量评估。"),
-  s(A, "skills", "pptx", "docs", "创建、读取、编辑 PowerPoint 演示文稿。"),
-  s(A, "skills", "docx", "docs", "创建、读取、编辑 Word 文档，支持修订与批注。"),
-  s(A, "skills", "xlsx", "docs", "处理 Excel 表格：公式、格式、图表与数据清洗。"),
-  s(A, "skills", "pdf", "docs", "提取、合并、拆分、填写与生成 PDF。"),
-  s(A, "skills", "frontend-design", "design", "生成风格鲜明、可上线的前端界面。"),
-  s(A, "skills", "canvas-design", "design", "用设计理念生成海报、视觉稿等静态作品。"),
-  s(A, "skills", "theme-factory", "design", "为幻灯片、文档、页面套用预设主题与配色。"),
-  s(A, "skills", "brand-guidelines", "design", "按品牌色与字体规范统一产出物外观。"),
-  s(A, "skills", "algorithmic-art", "design", "用 p5.js 生成算法艺术与生成式图形。"),
-  s(T, "skills", "taste-skill", "design", "反套路前端技能，避免模板味的落地页与作品集。"),
-  s(A, "skills", "mcp-builder", "dev", "构建高质量的 MCP 服务，对接外部 API。"),
-  s(A, "skills", "webapp-testing", "dev", "用 Playwright 测试并调试本地 Web 应用。"),
-  s(A, "skills", "web-artifacts-builder", "dev", "构建多组件的 React + Tailwind HTML 作品。"),
-  s(A, "skills", "claude-api", "dev", "使用 Claude API 与 Anthropic SDK 的参考。"),
-  s(A, "skills", "skill-creator", "dev", "创建、修改并评测自己的 skill。"),
+// [repo, SKILL.md 所在目录("" 表示根目录), 分类]
+const src = [
+  ["rc8s2242sr-cmd/writing-order", "", "writing"],
+  ["blader/humanizer", "", "writing"],
+  ["pbakaus/impeccable", "plugin/skills/impeccable", "design"],
+  ["ifeihong/feihong-design-system", "", "design"],
+  ["helloo1568/slidemuse", "", "ppt"],
+  ["hugohe3/ppt-master", "skills/ppt-master", "ppt"],
+  ["liouhai/plot-is-all-you-need", "skills/plot", "plot"],
+  ["liouhai/plot-is-all-you-need", "skills/collect", "plot"],
+  ...["nature-academic-search","nature-citation","nature-data","nature-downloader","nature-experiment-log","nature-literature-pipeline","nature-paper-card","nature-paper-to-patent","nature-paper-trans","nature-paper-xray","nature-polishing","nature-proposal-writer","nature-reader","nature-ref-verifier","nature-response","nature-reviewer","nature-social-science","nature-statistics","nature-writing"]
+    .map(n => ["Yuan1z0825/nature-skills", `skills/${n}`, /writing|polishing|response|proposal/.test(n) ? "writing" : "research"]),
+  ["Yuan1z0825/nature-skills", "skills/nature-figure", "plot"],
+  ["Yuan1z0825/nature-skills", "skills/nature-paper2ppt", "ppt"],
+  ["Yuan1z0825/nature-skills", "skills/nature-image2ppt", "ppt"],
+  ["Yuan1z0825/nature-skills", "skills/nature-paper2word", "writing"],
+  ...["ccf-experiment-designer","ccf-idea-optimizer","ccf-idea-reviewer","ccf-integrity-auditor","ccf-literature-monitor","ccf-literature-searcher","ccf-paper-reviewer","ccf-paper-to-exemplar","ccf-paper-writer","ccf-pipeline-orchestrator","ccf-project-scaffolder","ccf-rebuttal-writer","ccf-research-engineer","ccf-skill-forger","ccf-submission-checker","ccf-visual-composer","ccf-humanization"]
+    .map(n => ["mikubaka88/CCFA-Skills", n, /writer|rebuttal|humanization/.test(n) ? "writing" : n === "ccf-visual-composer" ? "plot" : "research"]),
 ];
 
-writeFileSync(new URL("../data/skills.json", import.meta.url),
-  JSON.stringify({ version: 1, categories, skills }, null, 2) + "\n");
+const branch = {};
+const gh = (...a) => execFileSync("gh", a, { encoding: "utf8", maxBuffer: 1 << 24 });
+
+function frontmatter(text) {
+  const m = text.replace(/^﻿/, "").match(/^---\r?\n([\s\S]*?)\r?\n---/);
+  const out = {};
+  if (!m) return out;
+  const L = m[1].split(/\r?\n/);
+  for (let i = 0; i < L.length; i++) {
+    const kv = L[i].match(/^(name|description):\s*(.*)$/); if (!kv) continue;
+    let v = kv[2].trim();
+    if (/^[>|][+-]?$/.test(v)) { v = ""; while (i + 1 < L.length && /^\s+/.test(L[i + 1])) v += " " + L[++i].trim(); }
+    out[kv[1]] = v.replace(/^["']|["']$/g, "").trim();
+  }
+  return out;
+}
+const clip = (s, n = 400) => { s = s.replace(/\s+/g, " ").trim(); return s.length > n ? s.slice(0, n - 1) + "…" : s; };
+
+const starCache = {};
+const stars = async r => (starCache[r] ??= Number(gh("api", `repos/${r}`, "--jq", ".stargazers_count")));
+const skills = [];
+for (const [repo, dir, category] of src) {
+  branch[repo] ??= gh("api", `repos/${repo}`, "--jq", ".default_branch").trim();
+  const path = (dir ? dir + "/" : "") + "SKILL.md";
+  let fm = {};
+  try { fm = frontmatter(Buffer.from(JSON.parse(gh("api", `repos/${repo}/contents/${path}`)).content, "base64").toString("utf8")); }
+  catch (e) { console.warn("读取失败", repo, path); }
+  const name = fm.name || dir.split("/").pop() || repo.split("/")[1];
+  const id = `${repo.split("/")[1]}-${dir.split("/").pop() || "root"}`;
+  if (!DESCS[id]) console.warn("缺少中文简介", id);
+  skills.push({
+    id, type: "skill", name, category,
+    desc: DESCS[id] || clip(fm.description || "", 120), repo, stars: await stars(repo),
+    url: `https://raw.githubusercontent.com/${repo}/${branch[repo]}/${path}`,
+  });
+}
+writeFileSync(new URL("../data/items.json", import.meta.url), JSON.stringify({ version: 2, types, categories, skills }, null, 2) + "\n");
 console.log(`wrote ${skills.length} skills`);
