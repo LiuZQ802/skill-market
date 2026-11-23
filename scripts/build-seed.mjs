@@ -16,6 +16,7 @@ const categories = [
 const src = [
   ["rc8s2242sr-cmd/writing-order", "", "writing"],
   ["blader/humanizer", "", "writing"],
+  ["LiuZQ802/wechat-paper-digest", "", "writing"],
   ["pbakaus/impeccable", "plugin/skills/impeccable", "design"],
   ["ifeihong/feihong-design-system", "", "design"],
   ["helloo1568/slidemuse", "", "ppt"],

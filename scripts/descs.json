@@ -46,5 +46,6 @@
 "CCFA-Skills-ccf-skill-forger": "维护和审计 CCFA 系列 skill 本身：触发条件、脚本、文档图示、依赖与发布校验。不用于写论文。",
 "CCFA-Skills-ccf-submission-checker": "投稿前检查：会议模板、页数、匿名性、PDF 构建、元数据与可复现材料，并核对该会议当年的官方规则。",
 "CCFA-Skills-ccf-visual-composer": "科研配图：用 Python 画数据分析图、消融图，并通过三步图像工作流绘制或重绘方法图、架构图、流程图。",
-"CCFA-Skills-ccf-humanization": "CCFA 系列的前置规范：让推理与表达直接、去掉空洞的防御性措辞、保留证据与不确定性，也用于论文去 AI 味。"
+"CCFA-Skills-ccf-humanization": "CCFA 系列的前置规范：让推理与表达直接、去掉空洞的防御性措辞、保留证据与不确定性，也用于论文去 AI 味。",
+"wechat-paper-digest-root": "论文转公众号推文：批量把论文 PDF 做成论文荐读文章，含封面、精选原图、渲染表格、严谨中文正文、爆款标题与分享摘要，并生成可一键复制到秀米的预览页。"
 }
