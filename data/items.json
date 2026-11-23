@@ -44,7 +44,8 @@
       "desc": "Nature 风格科研全流程套件：文献检索与核验、论文精读、写作润色、科研配图、统计审查、审稿回复，以及论文转 PPT 与 Word。",
       "repo": "Yuan1z0825/nature-skills",
       "url": "https://github.com/Yuan1z0825/nature-skills",
-      "stars": 54632
+      "stars": 54632,
+      "addedBy": "LZQ"
     },
     {
       "id": "group-CCFA-Skills",
@@ -55,7 +56,8 @@
       "desc": "CCF-A 论文套件：从想法打磨、文献追踪、实验设计，到写作、审稿、rebuttal 与投稿检查，覆盖整条论文流水线。",
       "repo": "mikubaka88/CCFA-Skills",
       "url": "https://github.com/mikubaka88/CCFA-Skills",
-      "stars": 3908
+      "stars": 3908,
+      "addedBy": "LZQ"
     },
     {
       "id": "group-plot-is-all-you-need",
@@ -66,7 +68,8 @@
       "desc": "科研绘图图库套件：plot 负责选图和画图，collect 负责收集参考图、维护图库。",
       "repo": "liouhai/plot-is-all-you-need",
       "url": "https://github.com/liouhai/plot-is-all-you-need",
-      "stars": 308
+      "stars": 308,
+      "addedBy": "LZQ"
     },
     {
       "id": "writing-order-root",
@@ -76,7 +79,8 @@
       "desc": "通用写作与改稿规程：起草、扩写、改写、精简、润色、审校任何文本时，按“底线、脉络、标题、语句、裁剪、修订”的路线产出逻辑清晰的成稿。",
       "repo": "rc8s2242sr-cmd/writing-order",
       "stars": 2,
-      "url": "https://raw.githubusercontent.com/rc8s2242sr-cmd/writing-order/main/SKILL.md"
+      "url": "https://raw.githubusercontent.com/rc8s2242sr-cmd/writing-order/main/SKILL.md",
+      "addedBy": "LZQ"
     },
     {
       "id": "humanizer-root",
@@ -86,7 +90,8 @@
       "desc": "去除文字里的 AI 腔：把“不是X而是Y”、金句收尾、三段式排比、滥用破折号、空话套话改得像真人写的，同时不改原意。",
       "repo": "blader/humanizer",
       "stars": 72461,
-      "url": "https://raw.githubusercontent.com/blader/humanizer/main/SKILL.md"
+      "url": "https://raw.githubusercontent.com/blader/humanizer/main/SKILL.md",
+      "addedBy": "LZQ"
     },
     {
       "id": "wechat-paper-digest-root",
@@ -96,7 +101,8 @@
       "desc": "论文转公众号推文：批量把论文 PDF 做成论文荐读文章，含封面、精选原图、渲染表格、严谨中文正文、爆款标题与分享摘要，并生成可一键复制到秀米的预览页。",
       "repo": "LiuZQ802/wechat-paper-digest",
       "stars": 0,
-      "url": "https://raw.githubusercontent.com/LiuZQ802/wechat-paper-digest/main/SKILL.md"
+      "url": "https://raw.githubusercontent.com/LiuZQ802/wechat-paper-digest/main/SKILL.md",
+      "addedBy": "LZQ"
     },
     {
       "id": "impeccable-impeccable",
@@ -106,7 +112,8 @@
       "desc": "前端设计与打磨：设计、重做、评审、审计、润色网页、落地页、仪表盘、App 界面和设计系统，让界面告别 AI 模板味。",
       "repo": "pbakaus/impeccable",
       "stars": 115207,
-      "url": "https://raw.githubusercontent.com/pbakaus/impeccable/main/plugin/skills/impeccable/SKILL.md"
+      "url": "https://raw.githubusercontent.com/pbakaus/impeccable/main/plugin/skills/impeccable/SKILL.md",
+      "addedBy": "LZQ"
     },
     {
       "id": "feihong-design-system-root",
@@ -116,7 +123,8 @@
       "desc": "飞鸿个人品牌设计系统：皇家蓝、复古金、酒红三色基调，含 10 种场景模板和 265+ 组件，用于做高质感、反 AI 味的页面。",
       "repo": "ifeihong/feihong-design-system",
       "stars": 28,
-      "url": "https://raw.githubusercontent.com/ifeihong/feihong-design-system/main/SKILL.md"
+      "url": "https://raw.githubusercontent.com/ifeihong/feihong-design-system/main/SKILL.md",
+      "addedBy": "LZQ"
     },
     {
       "id": "slidemuse-root",
@@ -126,7 +134,8 @@
       "desc": "把书籍、PDF、论文、报告或文字做成风格统一的图片版 PPT，可还原成可编辑 PPTX。适合竞赛答辩、路演、说课、读书分享。",
       "repo": "helloo1568/slidemuse",
       "stars": 238,
-      "url": "https://raw.githubusercontent.com/helloo1568/slidemuse/main/SKILL.md"
+      "url": "https://raw.githubusercontent.com/helloo1568/slidemuse/main/SKILL.md",
+      "addedBy": "LZQ"
     },
     {
       "id": "ppt-master-ppt-master",
@@ -136,7 +145,8 @@
       "desc": "生成可编辑的原生 PPTX：从文档或主题出发做整套幻灯片，也能复刻页面视觉、套用模板、美化或重设计已有 PPT。",
       "repo": "hugohe3/ppt-master",
       "stars": 79402,
-      "url": "https://raw.githubusercontent.com/hugohe3/ppt-master/main/skills/ppt-master/SKILL.md"
+      "url": "https://raw.githubusercontent.com/hugohe3/ppt-master/main/skills/ppt-master/SKILL.md",
+      "addedBy": "LZQ"
     },
     {
       "id": "plot-is-all-you-need-plot",
@@ -147,7 +157,8 @@
       "repo": "liouhai/plot-is-all-you-need",
       "stars": 308,
       "url": "https://raw.githubusercontent.com/liouhai/plot-is-all-you-need/main/skills/plot/SKILL.md",
-      "group": "group-plot-is-all-you-need"
+      "group": "group-plot-is-all-you-need",
+      "addedBy": "LZQ"
     },
     {
       "id": "plot-is-all-you-need-collect",
@@ -158,7 +169,8 @@
       "repo": "liouhai/plot-is-all-you-need",
       "stars": 308,
       "url": "https://raw.githubusercontent.com/liouhai/plot-is-all-you-need/main/skills/collect/SKILL.md",
-      "group": "group-plot-is-all-you-need"
+      "group": "group-plot-is-all-you-need",
+      "addedBy": "LZQ"
     },
     {
       "id": "nature-skills-nature-academic-search",
@@ -169,7 +181,8 @@
       "repo": "Yuan1z0825/nature-skills",
       "stars": 54632,
       "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-academic-search/SKILL.md",
-      "group": "group-nature-skills"
+      "group": "group-nature-skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "nature-skills-nature-citation",
@@ -180,7 +193,8 @@
       "repo": "Yuan1z0825/nature-skills",
       "stars": 54632,
       "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-citation/SKILL.md",
-      "group": "group-nature-skills"
+      "group": "group-nature-skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "nature-skills-nature-data",
@@ -191,7 +205,8 @@
       "repo": "Yuan1z0825/nature-skills",
       "stars": 54632,
       "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-data/SKILL.md",
-      "group": "group-nature-skills"
+      "group": "group-nature-skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "nature-skills-nature-downloader",
@@ -202,7 +217,8 @@
       "repo": "Yuan1z0825/nature-skills",
       "stars": 54632,
       "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-downloader/SKILL.md",
-      "group": "group-nature-skills"
+      "group": "group-nature-skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "nature-skills-nature-experiment-log",
@@ -213,7 +229,8 @@
       "repo": "Yuan1z0825/nature-skills",
       "stars": 54632,
       "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-experiment-log/SKILL.md",
-      "group": "group-nature-skills"
+      "group": "group-nature-skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "nature-skills-nature-literature-pipeline",
@@ -224,7 +241,8 @@
       "repo": "Yuan1z0825/nature-skills",
       "stars": 54632,
       "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-literature-pipeline/SKILL.md",
-      "group": "group-nature-skills"
+      "group": "group-nature-skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "nature-skills-nature-paper-card",
@@ -235,7 +253,8 @@
       "repo": "Yuan1z0825/nature-skills",
       "stars": 54632,
       "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-paper-card/SKILL.md",
-      "group": "group-nature-skills"
+      "group": "group-nature-skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "nature-skills-nature-paper-to-patent",
@@ -246,7 +265,8 @@
       "repo": "Yuan1z0825/nature-skills",
       "stars": 54632,
       "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-paper-to-patent/SKILL.md",
-      "group": "group-nature-skills"
+      "group": "group-nature-skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "nature-skills-nature-paper-trans",
@@ -257,7 +277,8 @@
       "repo": "Yuan1z0825/nature-skills",
       "stars": 54632,
       "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-paper-trans/SKILL.md",
-      "group": "group-nature-skills"
+      "group": "group-nature-skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "nature-skills-nature-paper-xray",
@@ -268,7 +289,8 @@
       "repo": "Yuan1z0825/nature-skills",
       "stars": 54632,
       "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-paper-xray/SKILL.md",
-      "group": "group-nature-skills"
+      "group": "group-nature-skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "nature-skills-nature-polishing",
@@ -279,7 +301,8 @@
       "repo": "Yuan1z0825/nature-skills",
       "stars": 54632,
       "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-polishing/SKILL.md",
-      "group": "group-nature-skills"
+      "group": "group-nature-skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "nature-skills-nature-proposal-writer",
@@ -290,7 +313,8 @@
       "repo": "Yuan1z0825/nature-skills",
       "stars": 54632,
       "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-proposal-writer/SKILL.md",
-      "group": "group-nature-skills"
+      "group": "group-nature-skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "nature-skills-nature-reader",
@@ -301,7 +325,8 @@
       "repo": "Yuan1z0825/nature-skills",
       "stars": 54632,
       "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-reader/SKILL.md",
-      "group": "group-nature-skills"
+      "group": "group-nature-skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "nature-skills-nature-ref-verifier",
@@ -312,7 +337,8 @@
       "repo": "Yuan1z0825/nature-skills",
       "stars": 54632,
       "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-ref-verifier/SKILL.md",
-      "group": "group-nature-skills"
+      "group": "group-nature-skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "nature-skills-nature-response",
@@ -323,7 +349,8 @@
       "repo": "Yuan1z0825/nature-skills",
       "stars": 54632,
       "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-response/SKILL.md",
-      "group": "group-nature-skills"
+      "group": "group-nature-skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "nature-skills-nature-reviewer",
@@ -334,7 +361,8 @@
       "repo": "Yuan1z0825/nature-skills",
       "stars": 54632,
       "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-reviewer/SKILL.md",
-      "group": "group-nature-skills"
+      "group": "group-nature-skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "nature-skills-nature-social-science",
@@ -345,7 +373,8 @@
       "repo": "Yuan1z0825/nature-skills",
       "stars": 54632,
       "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-social-science/SKILL.md",
-      "group": "group-nature-skills"
+      "group": "group-nature-skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "nature-skills-nature-statistics",
@@ -356,7 +385,8 @@
       "repo": "Yuan1z0825/nature-skills",
       "stars": 54632,
       "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-statistics/SKILL.md",
-      "group": "group-nature-skills"
+      "group": "group-nature-skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "nature-skills-nature-writing",
@@ -367,7 +397,8 @@
       "repo": "Yuan1z0825/nature-skills",
       "stars": 54632,
       "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-writing/SKILL.md",
-      "group": "group-nature-skills"
+      "group": "group-nature-skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "nature-skills-nature-figure",
@@ -378,7 +409,8 @@
       "repo": "Yuan1z0825/nature-skills",
       "stars": 54632,
       "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-figure/SKILL.md",
-      "group": "group-nature-skills"
+      "group": "group-nature-skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "nature-skills-nature-paper2ppt",
@@ -389,7 +421,8 @@
       "repo": "Yuan1z0825/nature-skills",
       "stars": 54632,
       "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-paper2ppt/SKILL.md",
-      "group": "group-nature-skills"
+      "group": "group-nature-skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "nature-skills-nature-image2ppt",
@@ -400,7 +433,8 @@
       "repo": "Yuan1z0825/nature-skills",
       "stars": 54632,
       "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-image2ppt/SKILL.md",
-      "group": "group-nature-skills"
+      "group": "group-nature-skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "nature-skills-nature-paper2word",
@@ -411,7 +445,8 @@
       "repo": "Yuan1z0825/nature-skills",
       "stars": 54632,
       "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-paper2word/SKILL.md",
-      "group": "group-nature-skills"
+      "group": "group-nature-skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "CCFA-Skills-ccf-experiment-designer",
@@ -422,7 +457,8 @@
       "repo": "mikubaka88/CCFA-Skills",
       "stars": 3908,
       "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-experiment-designer/SKILL.md",
-      "group": "group-CCFA-Skills"
+      "group": "group-CCFA-Skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "CCFA-Skills-ccf-idea-optimizer",
@@ -433,7 +469,8 @@
       "repo": "mikubaka88/CCFA-Skills",
       "stars": 3908,
       "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-idea-optimizer/SKILL.md",
-      "group": "group-CCFA-Skills"
+      "group": "group-CCFA-Skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "CCFA-Skills-ccf-idea-reviewer",
@@ -444,7 +481,8 @@
       "repo": "mikubaka88/CCFA-Skills",
       "stars": 3908,
       "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-idea-reviewer/SKILL.md",
-      "group": "group-CCFA-Skills"
+      "group": "group-CCFA-Skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "CCFA-Skills-ccf-integrity-auditor",
@@ -455,7 +493,8 @@
       "repo": "mikubaka88/CCFA-Skills",
       "stars": 3908,
       "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-integrity-auditor/SKILL.md",
-      "group": "group-CCFA-Skills"
+      "group": "group-CCFA-Skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "CCFA-Skills-ccf-literature-monitor",
@@ -466,7 +505,8 @@
       "repo": "mikubaka88/CCFA-Skills",
       "stars": 3908,
       "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-literature-monitor/SKILL.md",
-      "group": "group-CCFA-Skills"
+      "group": "group-CCFA-Skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "CCFA-Skills-ccf-literature-searcher",
@@ -477,7 +517,8 @@
       "repo": "mikubaka88/CCFA-Skills",
       "stars": 3908,
       "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-literature-searcher/SKILL.md",
-      "group": "group-CCFA-Skills"
+      "group": "group-CCFA-Skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "CCFA-Skills-ccf-paper-reviewer",
@@ -488,7 +529,8 @@
       "repo": "mikubaka88/CCFA-Skills",
       "stars": 3908,
       "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-paper-reviewer/SKILL.md",
-      "group": "group-CCFA-Skills"
+      "group": "group-CCFA-Skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "CCFA-Skills-ccf-paper-to-exemplar",
@@ -499,7 +541,8 @@
       "repo": "mikubaka88/CCFA-Skills",
       "stars": 3908,
       "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-paper-to-exemplar/SKILL.md",
-      "group": "group-CCFA-Skills"
+      "group": "group-CCFA-Skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "CCFA-Skills-ccf-paper-writer",
@@ -510,7 +553,8 @@
       "repo": "mikubaka88/CCFA-Skills",
       "stars": 3908,
       "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-paper-writer/SKILL.md",
-      "group": "group-CCFA-Skills"
+      "group": "group-CCFA-Skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "CCFA-Skills-ccf-pipeline-orchestrator",
@@ -521,7 +565,8 @@
       "repo": "mikubaka88/CCFA-Skills",
       "stars": 3908,
       "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-pipeline-orchestrator/SKILL.md",
-      "group": "group-CCFA-Skills"
+      "group": "group-CCFA-Skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "CCFA-Skills-ccf-project-scaffolder",
@@ -532,7 +577,8 @@
       "repo": "mikubaka88/CCFA-Skills",
       "stars": 3908,
       "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-project-scaffolder/SKILL.md",
-      "group": "group-CCFA-Skills"
+      "group": "group-CCFA-Skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "CCFA-Skills-ccf-rebuttal-writer",
@@ -543,7 +589,8 @@
       "repo": "mikubaka88/CCFA-Skills",
       "stars": 3908,
       "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-rebuttal-writer/SKILL.md",
-      "group": "group-CCFA-Skills"
+      "group": "group-CCFA-Skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "CCFA-Skills-ccf-research-engineer",
@@ -554,7 +601,8 @@
       "repo": "mikubaka88/CCFA-Skills",
       "stars": 3908,
       "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-research-engineer/SKILL.md",
-      "group": "group-CCFA-Skills"
+      "group": "group-CCFA-Skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "CCFA-Skills-ccf-skill-forger",
@@ -565,7 +613,8 @@
       "repo": "mikubaka88/CCFA-Skills",
       "stars": 3908,
       "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-skill-forger/SKILL.md",
-      "group": "group-CCFA-Skills"
+      "group": "group-CCFA-Skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "CCFA-Skills-ccf-submission-checker",
@@ -576,7 +625,8 @@
       "repo": "mikubaka88/CCFA-Skills",
       "stars": 3908,
       "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-submission-checker/SKILL.md",
-      "group": "group-CCFA-Skills"
+      "group": "group-CCFA-Skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "CCFA-Skills-ccf-visual-composer",
@@ -587,7 +637,8 @@
       "repo": "mikubaka88/CCFA-Skills",
       "stars": 3908,
       "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-visual-composer/SKILL.md",
-      "group": "group-CCFA-Skills"
+      "group": "group-CCFA-Skills",
+      "addedBy": "LZQ"
     },
     {
       "id": "CCFA-Skills-ccf-humanization",
@@ -598,7 +649,8 @@
       "repo": "mikubaka88/CCFA-Skills",
       "stars": 3908,
       "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-humanization/SKILL.md",
-      "group": "group-CCFA-Skills"
+      "group": "group-CCFA-Skills",
+      "addedBy": "LZQ"
     }
   ]
 }

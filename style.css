@@ -183,3 +183,6 @@ a.btn { display: inline-flex; align-items: center; justify-content: center; colo
 .group__list .card:hover { transform: none; box-shadow: none; }
 .card__actions { flex-wrap: wrap; }
 .card--group .card__actions .btn--primary { flex: none; }
+
+.card__by { font-size: 12.5px; color: var(--text-2); }
+.rank__main .card__by { margin-top: 2px; }

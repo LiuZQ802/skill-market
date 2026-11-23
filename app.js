@@ -51,7 +51,7 @@
   const groups = () => items().filter(s => s.kind === "group");
   const membersOf = g => items().filter(s => s.group === g.id);
   const topLevel = () => { const ids = new Set(groups().map(g => g.id)); return items().filter(s => !s.group || !ids.has(s.group)); };
-  const matches = (s, q) => !q || [s.name, s.desc, s.repo, catName(s.category)].join(" ").toLowerCase().includes(q);
+  const matches = (s, q) => !q || [s.name, s.desc, s.repo, s.addedBy, catName(s.category)].join(" ").toLowerCase().includes(q);
 
   /* ---------- 链接处理 ---------- */
   // 把 GitHub 的 blob / tree / 仓库链接统一成 raw 地址
@@ -163,6 +163,8 @@
     return list.sort((a, b) => (user.pinned.includes(b.id) - user.pinned.includes(a.id)));
   }
 
+  const byLine = s => el("p", { class: "card__by", text: `添加者:${s.addedBy || "未署名"}` });
+
   function card(s, i, compact = false) {
     if (s.kind === "group") return groupCard(s, i);
     const pinned = user.pinned.includes(s.id);
@@ -185,6 +187,7 @@
       el("p", { class: "card__desc", text: s.desc || "暂无简介" }),
       compact ? null : el("div", { class: "card__meta" }, el("span", { class: "tag", text: catName(s.category) }),
         s.repo ? el("span", { class: "card__repo", text: s.repo }) : null),
+      byLine(s),
       el("div", { class: "card__actions" }, copyBtn,
         el("a", { class: "btn btn--sm", href: pageOf(s.url), target: "_blank", rel: "noopener noreferrer", text: "查看仓库" })));
   }
@@ -213,6 +216,7 @@
       el("p", { class: "card__desc", text: g.desc || "暂无简介" }),
       el("div", { class: "card__meta" }, el("span", { class: "tag", text: catName(g.category) }),
         el("span", { text: `系列,共 ${all.length} 个 ${noun}` }), g.repo ? el("span", { class: "card__repo", text: g.repo }) : null),
+      byLine(g),
       el("div", { class: "card__actions" }, toggleBtn, copyAll,
         g.url ? el("a", { class: "btn btn--sm", href: g.url, target: "_blank", rel: "noopener noreferrer", text: "查看仓库" }) : null),
       open ? el("div", { class: "group__list" }, ...shown.map(m => card(m, 0, true))) : null);
@@ -226,7 +230,7 @@
       el("span", { class: "rank__n" + (i < 3 ? " is-top" : ""), text: String(i + 1) }),
       el("div", { class: "rank__main" },
         el("a", { class: "rank__name", href: pageOf(s.url), target: "_blank", rel: "noopener noreferrer", text: s.name }),
-        el("p", { class: "muted", text: s.desc || "暂无简介" })),
+        el("p", { class: "muted", text: s.desc || "暂无简介" }), byLine(s)),
       el("div", { class: "rank__stat" }, el("strong", { text: String(countOf(s)) }), el("span", { class: "muted", text: "次复制" })),
       s.stars != null ? el("div", { class: "rank__stat" }, el("strong", { text: fmtStars(s.stars) }), el("span", { class: "muted", text: "仓库 Star" })) : el("div"),
       copyBtn);
@@ -270,7 +274,8 @@
   }
 
   /* ---------- 添加 / 编辑 ---------- */
-  const dlg = $("#dlg"), f = { url: $("#fUrl"), name: $("#fName"), cat: $("#fCat"), newCat: $("#fNewCat"), desc: $("#fDesc"), group: $("#fGroup"), newGroup: $("#fNewGroup") };
+  const dlg = $("#dlg"), f = { url: $("#fUrl"), name: $("#fName"), cat: $("#fCat"), newCat: $("#fNewCat"), desc: $("#fDesc"), group: $("#fGroup"), newGroup: $("#fNewGroup"), author: $("#fAuthor") };
+  const AUTHOR_KEY = "sm.author";
   const NEWG = "__newg__";
   const isGroupEdit = () => ui.editing?.kind === "group";
   const NEW = "__new__";
@@ -292,6 +297,7 @@
     ui.editing = s; showError("");
     $("#dlgTitle").textContent = s ? (s.kind === "group" ? "编辑系列" : "编辑") : `添加 ${curType().noun}`;
     const g = s?.kind === "group";
+    f.author.value = s ? (s.addedBy || "") : (localStorage.getItem(AUTHOR_KEY) || "");
     f.url.closest(".field").hidden = g; f.group.closest(".field").hidden = g; f.newGroup.value = "";
     f.url.value = s ? s.url : ""; f.name.value = s ? s.name : ""; f.desc.value = s ? s.desc || "" : ""; f.newCat.value = "";
     fillCats(s ? s.category : ([ALL, PIN, RANK].includes(ui.cat) ? categories()[0]?.id : ui.cat));
@@ -334,6 +340,8 @@
 
   $("#form").addEventListener("submit", e => {
     e.preventDefault();
+    const author = f.author.value.trim();
+    if (!author) { showError("请填写添加者。"); return f.author.focus(); }
     const grp = isGroupEdit();
     const url = grp ? "" : toRaw(f.url.value);
     if (!grp && !url) return showError("请填写有效的链接(以 https:// 开头)。");
@@ -344,14 +352,14 @@
       const exist = categories().find(c => c.name === cn);
       category = exist ? exist.id : (() => { const c = { id: "c-" + slug(cn), name: cn, type: ui.type }; user.categories.push(c); return c.id; })();
     }
-    let data = { name, category, desc: f.desc.value.trim() };
+    let data = { name, category, desc: f.desc.value.trim(), addedBy: author };
     if (!grp) {
       let group = f.group.value;
       if (group === NEWG) {
         const gn = f.newGroup.value.trim(); if (!gn) return showError("请填写新系列名称。");
         const ex = groups().find(g => g.name === gn);
         if (ex) group = ex.id;
-        else { group = uid(); user.added.unshift({ id: group, type: ui.type, kind: "group", name: gn, desc: "", category, url: "", repo: "" }); }
+        else { group = uid(); user.added.unshift({ id: group, type: ui.type, kind: "group", name: gn, desc: "", category, url: "", repo: "", addedBy: author }); }
       }
       data = { ...data, url, repo: repoOf(url), group };
     }
@@ -359,6 +367,7 @@
     if (!s) user.added.unshift({ id: uid(), type: ui.type, ...data });
     else if (user.added.some(a => a.id === s.id)) user.added = user.added.map(a => a.id === s.id ? { ...a, ...data } : a);
     else user.overrides[s.id] = data;
+    localStorage.setItem(AUTHOR_KEY, author);
     save(); dlg.close(); render(); toast(s ? "已保存" : "已添加");
   });
 
@@ -388,7 +397,7 @@
       if (typeof d !== "object" || !Array.isArray(d.added || [])) throw 0;
       const s = v => (typeof v === "string" ? v : "");
       user = {
-        added: (d.added || []).filter(a => a && s(a.name) && (s(a.url) || a.kind === "group")).map(a => ({ id: s(a.id) || uid(), type: s(a.type) || "skill", name: s(a.name), desc: s(a.desc), category: s(a.category), url: s(a.url), repo: s(a.repo), kind: s(a.kind), group: s(a.group) })),
+        added: (d.added || []).filter(a => a && s(a.name) && (s(a.url) || a.kind === "group")).map(a => ({ id: s(a.id) || uid(), type: s(a.type) || "skill", name: s(a.name), desc: s(a.desc), category: s(a.category), url: s(a.url), repo: s(a.repo), kind: s(a.kind), group: s(a.group), addedBy: s(a.addedBy) })),
         overrides: d.overrides && typeof d.overrides === "object" ? d.overrides : {},
         hidden: (d.hidden || []).map(String), pinned: (d.pinned || []).map(String),
         categories: (d.categories || []).filter(c => c && s(c.id) && s(c.name)).map(c => ({ id: s(c.id), name: s(c.name), type: s(c.type) || "skill" })),

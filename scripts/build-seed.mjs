@@ -3,6 +3,7 @@ import { writeFileSync, readFileSync } from "node:fs";
 const DESCS = JSON.parse(readFileSync(new URL("./descs.json", import.meta.url), "utf8"));
 import { execFileSync } from "node:child_process";
 
+const ADDED_BY = "LZQ"; // 预置条目的添加者
 const types = [{ id: "skill", name: "Skills", noun: "Skill" }];
 const categories = [
   { id: "writing", name: "写作", type: "skill" },
@@ -65,7 +66,7 @@ for (const [repo, dir, category] of src) {
   if (!DESCS[id]) console.warn("缺少中文简介", id);
   skills.push({
     id, type: "skill", name, category,
-    desc: DESCS[id] || clip(fm.description || "", 120), repo, stars: await stars(repo),
+    desc: DESCS[id] || clip(fm.description || "", 120), addedBy: ADDED_BY, repo, stars: await stars(repo),
     url: `https://raw.githubusercontent.com/${repo}/${branch[repo]}/${path}`,
   });
 }
@@ -83,7 +84,7 @@ for (const g of groupDefs) {
   const members = skills.filter(x => x.repo === g.repo);
   const id = "group-" + g.repo.split("/")[1];
   members.forEach(m => { m.group = id; });
-  groups.push({ id, type: "skill", kind: "group", name: g.name, category: g.category, desc: g.desc,
+  groups.push({ id, type: "skill", kind: "group", name: g.name, category: g.category, desc: g.desc, addedBy: ADDED_BY,
     repo: g.repo, url: `https://github.com/${g.repo}`, stars: members[0]?.stars ?? 0 });
 }
 skills.unshift(...groups);
