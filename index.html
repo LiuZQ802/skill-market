@@ -84,6 +84,17 @@
       </div>
 
       <div class="field">
+        <label for="fGroup">所属系列</label>
+        <select id="fGroup"></select>
+        <p class="help">同一仓库里的多个条目可以合并成一张卡片，展开后再看。</p>
+      </div>
+
+      <div class="field" id="newGroupField" hidden>
+        <label for="fNewGroup">新系列名称</label>
+        <input id="fNewGroup" autocomplete="off">
+      </div>
+
+      <div class="field">
         <label for="fDesc">简介</label>
         <textarea id="fDesc" rows="3" placeholder="一句话说清它做什么、什么时候用"></textarea>
       </div>

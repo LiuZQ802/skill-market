@@ -36,6 +36,39 @@
   ],
   "skills": [
     {
+      "id": "group-nature-skills",
+      "type": "skill",
+      "kind": "group",
+      "name": "nature-skills",
+      "category": "research",
+      "desc": "Nature 风格科研全流程套件：文献检索与核验、论文精读、写作润色、科研配图、统计审查、审稿回复，以及论文转 PPT 与 Word。",
+      "repo": "Yuan1z0825/nature-skills",
+      "url": "https://github.com/Yuan1z0825/nature-skills",
+      "stars": 54628
+    },
+    {
+      "id": "group-CCFA-Skills",
+      "type": "skill",
+      "kind": "group",
+      "name": "CCFA-Skills",
+      "category": "research",
+      "desc": "CCF-A 论文套件：从想法打磨、文献追踪、实验设计，到写作、审稿、rebuttal 与投稿检查，覆盖整条论文流水线。",
+      "repo": "mikubaka88/CCFA-Skills",
+      "url": "https://github.com/mikubaka88/CCFA-Skills",
+      "stars": 3907
+    },
+    {
+      "id": "group-plot-is-all-you-need",
+      "type": "skill",
+      "kind": "group",
+      "name": "plot-is-all-you-need",
+      "category": "plot",
+      "desc": "科研绘图图库套件：plot 负责选图和画图，collect 负责收集参考图、维护图库。",
+      "repo": "liouhai/plot-is-all-you-need",
+      "url": "https://github.com/liouhai/plot-is-all-you-need",
+      "stars": 308
+    },
+    {
       "id": "writing-order-root",
       "type": "skill",
       "name": "writing-order",
@@ -52,7 +85,7 @@
       "category": "writing",
       "desc": "去除文字里的 AI 腔：把“不是X而是Y”、金句收尾、三段式排比、滥用破折号、空话套话改得像真人写的，同时不改原意。",
       "repo": "blader/humanizer",
-      "stars": 72454,
+      "stars": 72457,
       "url": "https://raw.githubusercontent.com/blader/humanizer/main/SKILL.md"
     },
     {
@@ -62,7 +95,7 @@
       "category": "design",
       "desc": "前端设计与打磨：设计、重做、评审、审计、润色网页、落地页、仪表盘、App 界面和设计系统，让界面告别 AI 模板味。",
       "repo": "pbakaus/impeccable",
-      "stars": 115194,
+      "stars": 115198,
       "url": "https://raw.githubusercontent.com/pbakaus/impeccable/main/plugin/skills/impeccable/SKILL.md"
     },
     {
@@ -92,7 +125,7 @@
       "category": "ppt",
       "desc": "生成可编辑的原生 PPTX：从文档或主题出发做整套幻灯片，也能复刻页面视觉、套用模板、美化或重设计已有 PPT。",
       "repo": "hugohe3/ppt-master",
-      "stars": 79394,
+      "stars": 79397,
       "url": "https://raw.githubusercontent.com/hugohe3/ppt-master/main/skills/ppt-master/SKILL.md"
     },
     {
@@ -103,7 +136,8 @@
       "desc": "科研绘图选图工具：先从图库挑样图，自由组合布局与配色，再用你的数据画出来并与样例并排对照。要画图、配图时用它。",
       "repo": "liouhai/plot-is-all-you-need",
       "stars": 308,
-      "url": "https://raw.githubusercontent.com/liouhai/plot-is-all-you-need/main/skills/plot/SKILL.md"
+      "url": "https://raw.githubusercontent.com/liouhai/plot-is-all-you-need/main/skills/plot/SKILL.md",
+      "group": "group-plot-is-all-you-need"
     },
     {
       "id": "plot-is-all-you-need-collect",
@@ -113,7 +147,8 @@
       "desc": "图库维护工具：从抖音作品或主页收集科研绘图参考，自动下载拆图、筛选、去重并写鉴赏卡片，扩充 plot 用的图库。",
       "repo": "liouhai/plot-is-all-you-need",
       "stars": 308,
-      "url": "https://raw.githubusercontent.com/liouhai/plot-is-all-you-need/main/skills/collect/SKILL.md"
+      "url": "https://raw.githubusercontent.com/liouhai/plot-is-all-you-need/main/skills/collect/SKILL.md",
+      "group": "group-plot-is-all-you-need"
     },
     {
       "id": "nature-skills-nature-academic-search",
@@ -122,8 +157,9 @@
       "category": "research",
       "desc": "文献检索与引文核对：跨来源搜论文、核对和管理参考文献，构建 MeSH 检索式，做严格他引审计。",
       "repo": "Yuan1z0825/nature-skills",
-      "stars": 54627,
-      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-academic-search/SKILL.md"
+      "stars": 54628,
+      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-academic-search/SKILL.md",
+      "group": "group-nature-skills"
     },
     {
       "id": "nature-skills-nature-citation",
@@ -132,8 +168,9 @@
       "category": "research",
       "desc": "为论文论点找 Nature/CNS 系列的支撑文献，建立“论点到来源”的对应，并导出到文献管理软件。",
       "repo": "Yuan1z0825/nature-skills",
-      "stars": 54627,
-      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-citation/SKILL.md"
+      "stars": 54628,
+      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-citation/SKILL.md",
+      "group": "group-nature-skills"
     },
     {
       "id": "nature-skills-nature-data",
@@ -142,8 +179,9 @@
       "category": "research",
       "desc": "撰写或检查论文的数据与代码可用性声明，规划数据仓库与共享方式，补全 FAIR 元数据和数据集引用。",
       "repo": "Yuan1z0825/nature-skills",
-      "stars": 54627,
-      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-data/SKILL.md"
+      "stars": 54628,
+      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-data/SKILL.md",
+      "group": "group-nature-skills"
     },
     {
       "id": "nature-skills-nature-downloader",
@@ -152,8 +190,9 @@
       "category": "research",
       "desc": "合法获取学术全文：知网机构访问、英文开放获取、出版商 API、机构浏览器兜底，以及补充材料下载。",
       "repo": "Yuan1z0825/nature-skills",
-      "stars": 54627,
-      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-downloader/SKILL.md"
+      "stars": 54628,
+      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-downloader/SKILL.md",
+      "group": "group-nature-skills"
     },
     {
       "id": "nature-skills-nature-experiment-log",
@@ -162,8 +201,9 @@
       "category": "research",
       "desc": "标准化实验日志：直接读取图片、语音和文字，生成带 YAML 头的 Markdown 记录，可选同步飞书和 Obsidian。",
       "repo": "Yuan1z0825/nature-skills",
-      "stars": 54627,
-      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-experiment-log/SKILL.md"
+      "stars": 54628,
+      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-experiment-log/SKILL.md",
+      "group": "group-nature-skills"
     },
     {
       "id": "nature-skills-nature-literature-pipeline",
@@ -172,8 +212,9 @@
       "category": "research",
       "desc": "全自动文献追踪流水线：多源检索、六维打分、精读、格式化推送与归档，可定时运行并推送到飞书或 Telegram。",
       "repo": "Yuan1z0825/nature-skills",
-      "stars": 54627,
-      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-literature-pipeline/SKILL.md"
+      "stars": 54628,
+      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-literature-pipeline/SKILL.md",
+      "group": "group-nature-skills"
     },
     {
       "id": "nature-skills-nature-paper-card",
@@ -182,8 +223,9 @@
       "category": "research",
       "desc": "给单篇论文做精读卡：拆解方法、梳理“实验对应结论”的证据链、列出局限并提炼可做的研究点子。",
       "repo": "Yuan1z0825/nature-skills",
-      "stars": 54627,
-      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-paper-card/SKILL.md"
+      "stars": 54628,
+      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-paper-card/SKILL.md",
+      "group": "group-nature-skills"
     },
     {
       "id": "nature-skills-nature-paper-to-patent",
@@ -192,8 +234,9 @@
       "category": "research",
       "desc": "把论文或发明人材料转成中文发明专利初稿与技术交底书，含现有技术对比，输出 DOCX。",
       "repo": "Yuan1z0825/nature-skills",
-      "stars": 54627,
-      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-paper-to-patent/SKILL.md"
+      "stars": 54628,
+      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-paper-to-patent/SKILL.md",
+      "group": "group-nature-skills"
     },
     {
       "id": "nature-skills-nature-paper-trans",
@@ -202,8 +245,9 @@
       "category": "research",
       "desc": "把英文论文 PDF 逐页翻译成中文图片型 PDF，尽量保留版式、分栏、图表和公式，只交付中文版，方便阅读。",
       "repo": "Yuan1z0825/nature-skills",
-      "stars": 54627,
-      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-paper-trans/SKILL.md"
+      "stars": 54628,
+      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-paper-trans/SKILL.md",
+      "group": "group-nature-skills"
     },
     {
       "id": "nature-skills-nature-paper-xray",
@@ -212,8 +256,9 @@
       "category": "research",
       "desc": "单篇论文深度精读：还原作者真正的思路与设计动机，讲透公式怎么推出来。引用、汇报、评审或复现前使用。",
       "repo": "Yuan1z0825/nature-skills",
-      "stars": 54627,
-      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-paper-xray/SKILL.md"
+      "stars": 54628,
+      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-paper-xray/SKILL.md",
+      "group": "group-nature-skills"
     },
     {
       "id": "nature-skills-nature-polishing",
@@ -222,8 +267,9 @@
       "category": "writing",
       "desc": "论文润色、学术翻译与正文精简：保留事实、术语和证据边界，也能修 LaTeX 排版。只改语言，不重写论证。",
       "repo": "Yuan1z0825/nature-skills",
-      "stars": 54627,
-      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-polishing/SKILL.md"
+      "stars": 54628,
+      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-polishing/SKILL.md",
+      "group": "group-nature-skills"
     },
     {
       "id": "nature-skills-nature-proposal-writer",
@@ -232,8 +278,9 @@
       "category": "writing",
       "desc": "撰写、修改或审查研究计划、开题报告、科研项目申请书，依据已有证据组织内容。",
       "repo": "Yuan1z0825/nature-skills",
-      "stars": 54627,
-      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-proposal-writer/SKILL.md"
+      "stars": 54628,
+      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-proposal-writer/SKILL.md",
+      "group": "group-nature-skills"
     },
     {
       "id": "nature-skills-nature-reader",
@@ -242,8 +289,9 @@
       "category": "research",
       "desc": "制作中英对照的论文阅读器：正文、图表、公式逐段对齐，可做全文翻译、精读，也能就原文某处提问。",
       "repo": "Yuan1z0825/nature-skills",
-      "stars": 54627,
-      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-reader/SKILL.md"
+      "stars": 54628,
+      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-reader/SKILL.md",
+      "group": "group-nature-skills"
     },
     {
       "id": "nature-skills-nature-ref-verifier",
@@ -252,8 +300,9 @@
       "category": "research",
       "desc": "参考文献逐条核验：多源交叉比对作者、标题、年份、卷期、页码，标出年份冲突、作者顺序和页码错误，可与 Zotero 同步修正。",
       "repo": "Yuan1z0825/nature-skills",
-      "stars": 54627,
-      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-ref-verifier/SKILL.md"
+      "stars": 54628,
+      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-ref-verifier/SKILL.md",
+      "group": "group-nature-skills"
     },
     {
       "id": "nature-skills-nature-response",
@@ -262,8 +311,9 @@
       "category": "writing",
       "desc": "审稿意见回复：撰写或检查逐点回复、返修信，以及带修订标记的稿件或 LaTeX 返修包。",
       "repo": "Yuan1z0825/nature-skills",
-      "stars": 54627,
-      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-response/SKILL.md"
+      "stars": 54628,
+      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-response/SKILL.md",
+      "group": "group-nature-skills"
     },
     {
       "id": "nature-skills-nature-reviewer",
@@ -272,8 +322,9 @@
       "category": "research",
       "desc": "模拟审稿：以审稿人视角评估论文的重要性、有效性与主要和次要问题，适合投稿前自审。",
       "repo": "Yuan1z0825/nature-skills",
-      "stars": 54627,
-      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-reviewer/SKILL.md"
+      "stars": 54628,
+      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-reviewer/SKILL.md",
+      "group": "group-nature-skills"
     },
     {
       "id": "nature-skills-nature-social-science",
@@ -282,8 +333,9 @@
       "category": "research",
       "desc": "社会科学选题与论证工作台：找题目和研究问题、梳理文献版图、新颖性审计、模拟“审稿人2”攻击，也能检查论文里的过度断言。",
       "repo": "Yuan1z0825/nature-skills",
-      "stars": 54627,
-      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-social-science/SKILL.md"
+      "stars": 54628,
+      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-social-science/SKILL.md",
+      "group": "group-nature-skills"
     },
     {
       "id": "nature-skills-nature-statistics",
@@ -292,8 +344,9 @@
       "category": "research",
       "desc": "审查并改进论文的统计报告：实验单位、重复、不确定性、检验方法、图注统计，并应对审稿人的统计质疑。",
       "repo": "Yuan1z0825/nature-skills",
-      "stars": 54627,
-      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-statistics/SKILL.md"
+      "stars": 54628,
+      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-statistics/SKILL.md",
+      "group": "group-nature-skills"
     },
     {
       "id": "nature-skills-nature-writing",
@@ -302,8 +355,9 @@
       "category": "writing",
       "desc": "科研论文写作：根据你提供的证据起草章节、重构论证、压缩正文，准备首次投稿材料。",
       "repo": "Yuan1z0825/nature-skills",
-      "stars": 54627,
-      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-writing/SKILL.md"
+      "stars": 54628,
+      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-writing/SKILL.md",
+      "group": "group-nature-skills"
     },
     {
       "id": "nature-skills-nature-figure",
@@ -312,8 +366,9 @@
       "category": "plot",
       "desc": "用 Python 或 R 制作、修改并导出论文配图：多面板图、投稿级图表，也可生成图形摘要和机制示意图。",
       "repo": "Yuan1z0825/nature-skills",
-      "stars": 54627,
-      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-figure/SKILL.md"
+      "stars": 54628,
+      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-figure/SKILL.md",
+      "group": "group-nature-skills"
     },
     {
       "id": "nature-skills-nature-paper2ppt",
@@ -322,8 +377,9 @@
       "category": "ppt",
       "desc": "把论文或阅读笔记做成中文学术 PPTX，带原图和讲稿备注。用于文献汇报、组会、答辩。",
       "repo": "Yuan1z0825/nature-skills",
-      "stars": 54627,
-      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-paper2ppt/SKILL.md"
+      "stars": 54628,
+      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-paper2ppt/SKILL.md",
+      "group": "group-nature-skills"
     },
     {
       "id": "nature-skills-nature-image2ppt",
@@ -332,8 +388,9 @@
       "category": "ppt",
       "desc": "把幻灯片图片、截图、扫描版 PDF 或纯图片 PPTX 还原成对象级可编辑的 PowerPoint。",
       "repo": "Yuan1z0825/nature-skills",
-      "stars": 54627,
-      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-image2ppt/SKILL.md"
+      "stars": 54628,
+      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-image2ppt/SKILL.md",
+      "group": "group-nature-skills"
     },
     {
       "id": "nature-skills-nature-paper2word",
@@ -342,8 +399,9 @@
       "category": "writing",
       "desc": "把 Markdown 论文导出为符合期刊或学位论文规范的 Word：公式、三线表、交叉引用、页码和 GB/T 7714、APA 等参考文献格式。",
       "repo": "Yuan1z0825/nature-skills",
-      "stars": 54627,
-      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-paper2word/SKILL.md"
+      "stars": 54628,
+      "url": "https://raw.githubusercontent.com/Yuan1z0825/nature-skills/main/skills/nature-paper2word/SKILL.md",
+      "group": "group-nature-skills"
     },
     {
       "id": "CCFA-Skills-ccf-experiment-designer",
@@ -352,8 +410,9 @@
       "category": "research",
       "desc": "设计与解读实验：数据集、基线、指标、消融、运行要求与结果表内容，也可分析实验结果。",
       "repo": "mikubaka88/CCFA-Skills",
-      "stars": 3905,
-      "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-experiment-designer/SKILL.md"
+      "stars": 3907,
+      "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-experiment-designer/SKILL.md",
+      "group": "group-CCFA-Skills"
     },
     {
       "id": "CCFA-Skills-ccf-idea-optimizer",
@@ -362,8 +421,9 @@
       "category": "research",
       "desc": "把粗糙的研究想法打磨成清晰的问题、洞察、机制与证据方案，用于找方向、具象化想法。",
       "repo": "mikubaka88/CCFA-Skills",
-      "stars": 3905,
-      "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-idea-optimizer/SKILL.md"
+      "stars": 3907,
+      "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-idea-optimizer/SKILL.md",
+      "group": "group-CCFA-Skills"
     },
     {
       "id": "CCFA-Skills-ccf-idea-reviewer",
@@ -372,8 +432,9 @@
       "category": "research",
       "desc": "评审研究想法的价值、新颖性、洞察与机制，回答“靠谱吗、值得做吗、创新够不够”，可打分排序。",
       "repo": "mikubaka88/CCFA-Skills",
-      "stars": 3905,
-      "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-idea-reviewer/SKILL.md"
+      "stars": 3907,
+      "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-idea-reviewer/SKILL.md",
+      "group": "group-CCFA-Skills"
     },
     {
       "id": "CCFA-Skills-ccf-integrity-auditor",
@@ -382,8 +443,9 @@
       "category": "research",
       "desc": "核查论文里已有的论断、数字、术语与引用是否与证据一致，含 BibTeX 与上下文检查。",
       "repo": "mikubaka88/CCFA-Skills",
-      "stars": 3905,
-      "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-integrity-auditor/SKILL.md"
+      "stars": 3907,
+      "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-integrity-auditor/SKILL.md",
+      "group": "group-CCFA-Skills"
     },
     {
       "id": "CCFA-Skills-ccf-literature-monitor",
@@ -392,8 +454,9 @@
       "category": "research",
       "desc": "追踪 arXiv、OpenReview、会议和竞争对手的新论文，持续检查你的工作是否撞车，给出带日期的变化。",
       "repo": "mikubaka88/CCFA-Skills",
-      "stars": 3905,
-      "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-literature-monitor/SKILL.md"
+      "stars": 3907,
+      "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-literature-monitor/SKILL.md",
+      "group": "group-CCFA-Skills"
     },
     {
       "id": "CCFA-Skills-ccf-literature-searcher",
@@ -402,8 +465,9 @@
       "category": "research",
       "desc": "检索并核实外部文献、已有工作、数据集、基准和候选引用，输出相关工作与研究机会图。",
       "repo": "mikubaka88/CCFA-Skills",
-      "stars": 3905,
-      "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-literature-searcher/SKILL.md"
+      "stars": 3907,
+      "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-literature-searcher/SKILL.md",
+      "group": "group-CCFA-Skills"
     },
     {
       "id": "CCFA-Skills-ccf-paper-reviewer",
@@ -412,8 +476,9 @@
       "category": "research",
       "desc": "审稿式评估：检查论文的论断、证据与写作，指出硬伤和投稿成熟度，只评审不改写，可对比版本。",
       "repo": "mikubaka88/CCFA-Skills",
-      "stars": 3905,
-      "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-paper-reviewer/SKILL.md"
+      "stars": 3907,
+      "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-paper-reviewer/SKILL.md",
+      "group": "group-CCFA-Skills"
     },
     {
       "id": "CCFA-Skills-ccf-paper-to-exemplar",
@@ -422,8 +487,9 @@
       "category": "research",
       "desc": "把论文 PDF 提炼成“写作范例卡”并登记到个人库，学习其论证结构和表达，而不照搬科学结论。",
       "repo": "mikubaka88/CCFA-Skills",
-      "stars": 3905,
-      "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-paper-to-exemplar/SKILL.md"
+      "stars": 3907,
+      "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-paper-to-exemplar/SKILL.md",
+      "group": "group-CCFA-Skills"
     },
     {
       "id": "CCFA-Skills-ccf-paper-writer",
@@ -432,8 +498,9 @@
       "category": "writing",
       "desc": "撰写、修改、润色、压缩论文：从研究材料写出完整初稿（实验可留空），也能改写摘要、章节和幻灯片。",
       "repo": "mikubaka88/CCFA-Skills",
-      "stars": 3905,
-      "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-paper-writer/SKILL.md"
+      "stars": 3907,
+      "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-paper-writer/SKILL.md",
+      "group": "group-CCFA-Skills"
     },
     {
       "id": "CCFA-Skills-ccf-pipeline-orchestrator",
@@ -442,8 +509,9 @@
       "category": "research",
       "desc": "规划并协调科研各阶段：任务拆解、流程规划、项目状态，也可按要求自主迭代科研。",
       "repo": "mikubaka88/CCFA-Skills",
-      "stars": 3905,
-      "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-pipeline-orchestrator/SKILL.md"
+      "stars": 3907,
+      "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-pipeline-orchestrator/SKILL.md",
+      "group": "group-CCFA-Skills"
     },
     {
       "id": "CCFA-Skills-ccf-project-scaffolder",
@@ -452,8 +520,9 @@
       "category": "research",
       "desc": "初始化科研项目：搭建目录、LaTeX 论文模板、产物文件夹和 ccfa.yaml，不覆盖已有文件。",
       "repo": "mikubaka88/CCFA-Skills",
-      "stars": 3905,
-      "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-project-scaffolder/SKILL.md"
+      "stars": 3907,
+      "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-project-scaffolder/SKILL.md",
+      "group": "group-CCFA-Skills"
     },
     {
       "id": "CCFA-Skills-ccf-rebuttal-writer",
@@ -462,8 +531,9 @@
       "category": "writing",
       "desc": "撰写 rebuttal、作者回复、修订清单、回复信与重投计划，承诺只写能兑现的改动。",
       "repo": "mikubaka88/CCFA-Skills",
-      "stars": 3905,
-      "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-rebuttal-writer/SKILL.md"
+      "stars": 3907,
+      "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-rebuttal-writer/SKILL.md",
+      "group": "group-CCFA-Skills"
     },
     {
       "id": "CCFA-Skills-ccf-research-engineer",
@@ -472,8 +542,9 @@
       "category": "research",
       "desc": "科研编码与复现：实现和调试研究代码、选代码库、复现基线、把机制落到模型结构，并按测量优化训练与显存。",
       "repo": "mikubaka88/CCFA-Skills",
-      "stars": 3905,
-      "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-research-engineer/SKILL.md"
+      "stars": 3907,
+      "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-research-engineer/SKILL.md",
+      "group": "group-CCFA-Skills"
     },
     {
       "id": "CCFA-Skills-ccf-skill-forger",
@@ -482,8 +553,9 @@
       "category": "research",
       "desc": "维护和审计 CCFA 系列 skill 本身：触发条件、脚本、文档图示、依赖与发布校验。不用于写论文。",
       "repo": "mikubaka88/CCFA-Skills",
-      "stars": 3905,
-      "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-skill-forger/SKILL.md"
+      "stars": 3907,
+      "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-skill-forger/SKILL.md",
+      "group": "group-CCFA-Skills"
     },
     {
       "id": "CCFA-Skills-ccf-submission-checker",
@@ -492,8 +564,9 @@
       "category": "research",
       "desc": "投稿前检查：会议模板、页数、匿名性、PDF 构建、元数据与可复现材料，并核对该会议当年的官方规则。",
       "repo": "mikubaka88/CCFA-Skills",
-      "stars": 3905,
-      "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-submission-checker/SKILL.md"
+      "stars": 3907,
+      "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-submission-checker/SKILL.md",
+      "group": "group-CCFA-Skills"
     },
     {
       "id": "CCFA-Skills-ccf-visual-composer",
@@ -502,8 +575,9 @@
       "category": "plot",
       "desc": "科研配图：用 Python 画数据分析图、消融图，并通过三步图像工作流绘制或重绘方法图、架构图、流程图。",
       "repo": "mikubaka88/CCFA-Skills",
-      "stars": 3905,
-      "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-visual-composer/SKILL.md"
+      "stars": 3907,
+      "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-visual-composer/SKILL.md",
+      "group": "group-CCFA-Skills"
     },
     {
       "id": "CCFA-Skills-ccf-humanization",
@@ -512,8 +586,9 @@
       "category": "writing",
       "desc": "CCFA 系列的前置规范：让推理与表达直接、去掉空洞的防御性措辞、保留证据与不确定性，也用于论文去 AI 味。",
       "repo": "mikubaka88/CCFA-Skills",
-      "stars": 3905,
-      "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-humanization/SKILL.md"
+      "stars": 3907,
+      "url": "https://raw.githubusercontent.com/mikubaka88/CCFA-Skills/main/ccf-humanization/SKILL.md",
+      "group": "group-CCFA-Skills"
     }
   ]
 }

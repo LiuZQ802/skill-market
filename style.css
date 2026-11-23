@@ -172,3 +172,14 @@ a.btn { display: inline-flex; align-items: center; justify-content: center; colo
   .rank__row { grid-template-columns: 32px 1fr auto; }
   .rank__stat { display: none; }
 }
+
+/* 系列卡片: 折叠时一张卡,展开后占满整行并列出成员 */
+.card--group { border-left: 3px solid var(--accent); }
+.card--group.is-open { grid-column: 1 / -1; }
+.card--group.is-open:hover { transform: none; }
+.card__meta span + span::before { content: none; }
+.group__list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; margin-top: 6px; padding-top: 16px; border-top: 1px solid var(--line); }
+.group__list .card { background: var(--bg); animation: none; padding: 14px; }
+.group__list .card:hover { transform: none; box-shadow: none; }
+.card__actions { flex-wrap: wrap; }
+.card--group .card__actions .btn--primary { flex: none; }
