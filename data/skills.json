@@ -1,0 +1,270 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "writing",
+      "name": "写作"
+    },
+    {
+      "id": "research",
+      "name": "科研"
+    },
+    {
+      "id": "docs",
+      "name": "PPT 与文档"
+    },
+    {
+      "id": "design",
+      "name": "设计"
+    },
+    {
+      "id": "dev",
+      "name": "开发"
+    }
+  ],
+  "skills": [
+    {
+      "id": "skills-doc-coauthoring",
+      "type": "skill",
+      "name": "doc-coauthoring",
+      "category": "writing",
+      "desc": "与 Claude 分阶段共同撰写文档、提案、技术规范。",
+      "repo": "anthropics/skills",
+      "url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/doc-coauthoring/SKILL.md"
+    },
+    {
+      "id": "skills-internal-comms",
+      "type": "skill",
+      "name": "internal-comms",
+      "category": "writing",
+      "desc": "撰写周报、公告、FAQ、项目更新等内部沟通材料。",
+      "repo": "anthropics/skills",
+      "url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/internal-comms/SKILL.md"
+    },
+    {
+      "id": "claude-scientific-skills-scientific-writing",
+      "type": "skill",
+      "name": "scientific-writing",
+      "category": "writing",
+      "desc": "撰写科研论文的结构、段落与引用规范。",
+      "repo": "K-Dense-AI/claude-scientific-skills",
+      "url": "https://raw.githubusercontent.com/K-Dense-AI/claude-scientific-skills/main/skills/scientific-writing/SKILL.md"
+    },
+    {
+      "id": "claude-scientific-skills-literature-review",
+      "type": "skill",
+      "name": "literature-review",
+      "category": "research",
+      "desc": "系统性文献检索、筛选与综述撰写。",
+      "repo": "K-Dense-AI/claude-scientific-skills",
+      "url": "https://raw.githubusercontent.com/K-Dense-AI/claude-scientific-skills/main/skills/literature-review/SKILL.md"
+    },
+    {
+      "id": "claude-scientific-skills-citation-management",
+      "type": "skill",
+      "name": "citation-management",
+      "category": "research",
+      "desc": "管理参考文献，生成并校验 BibTeX 与引用格式。",
+      "repo": "K-Dense-AI/claude-scientific-skills",
+      "url": "https://raw.githubusercontent.com/K-Dense-AI/claude-scientific-skills/main/skills/citation-management/SKILL.md"
+    },
+    {
+      "id": "claude-scientific-skills-peer-review",
+      "type": "skill",
+      "name": "peer-review",
+      "category": "research",
+      "desc": "以审稿人视角审阅论文，给出结构化意见。",
+      "repo": "K-Dense-AI/claude-scientific-skills",
+      "url": "https://raw.githubusercontent.com/K-Dense-AI/claude-scientific-skills/main/skills/peer-review/SKILL.md"
+    },
+    {
+      "id": "claude-scientific-skills-hypothesis-generation",
+      "type": "skill",
+      "name": "hypothesis-generation",
+      "category": "research",
+      "desc": "基于已有证据提出并梳理可检验的研究假设。",
+      "repo": "K-Dense-AI/claude-scientific-skills",
+      "url": "https://raw.githubusercontent.com/K-Dense-AI/claude-scientific-skills/main/skills/hypothesis-generation/SKILL.md"
+    },
+    {
+      "id": "claude-scientific-skills-scientific-critical-thinking",
+      "type": "skill",
+      "name": "scientific-critical-thinking",
+      "category": "research",
+      "desc": "评估研究设计、证据强度与潜在偏倚。",
+      "repo": "K-Dense-AI/claude-scientific-skills",
+      "url": "https://raw.githubusercontent.com/K-Dense-AI/claude-scientific-skills/main/skills/scientific-critical-thinking/SKILL.md"
+    },
+    {
+      "id": "claude-scientific-skills-statistical-analysis",
+      "type": "skill",
+      "name": "statistical-analysis",
+      "category": "research",
+      "desc": "选择统计方法，完成检验、效应量与结果报告。",
+      "repo": "K-Dense-AI/claude-scientific-skills",
+      "url": "https://raw.githubusercontent.com/K-Dense-AI/claude-scientific-skills/main/skills/statistical-analysis/SKILL.md"
+    },
+    {
+      "id": "claude-scientific-skills-research-grants",
+      "type": "skill",
+      "name": "research-grants",
+      "category": "research",
+      "desc": "撰写基金申请书，对齐评审标准与预算说明。",
+      "repo": "K-Dense-AI/claude-scientific-skills",
+      "url": "https://raw.githubusercontent.com/K-Dense-AI/claude-scientific-skills/main/skills/research-grants/SKILL.md"
+    },
+    {
+      "id": "claude-scientific-skills-paper-lookup",
+      "type": "skill",
+      "name": "paper-lookup",
+      "category": "research",
+      "desc": "按主题或标题检索论文并核对元数据。",
+      "repo": "K-Dense-AI/claude-scientific-skills",
+      "url": "https://raw.githubusercontent.com/K-Dense-AI/claude-scientific-skills/main/skills/paper-lookup/SKILL.md"
+    },
+    {
+      "id": "claude-scientific-skills-scholar-evaluation",
+      "type": "skill",
+      "name": "scholar-evaluation",
+      "category": "research",
+      "desc": "对学术工作做结构化质量评估。",
+      "repo": "K-Dense-AI/claude-scientific-skills",
+      "url": "https://raw.githubusercontent.com/K-Dense-AI/claude-scientific-skills/main/skills/scholar-evaluation/SKILL.md"
+    },
+    {
+      "id": "skills-pptx",
+      "type": "skill",
+      "name": "pptx",
+      "category": "docs",
+      "desc": "创建、读取、编辑 PowerPoint 演示文稿。",
+      "repo": "anthropics/skills",
+      "url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/pptx/SKILL.md"
+    },
+    {
+      "id": "skills-docx",
+      "type": "skill",
+      "name": "docx",
+      "category": "docs",
+      "desc": "创建、读取、编辑 Word 文档，支持修订与批注。",
+      "repo": "anthropics/skills",
+      "url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/docx/SKILL.md"
+    },
+    {
+      "id": "skills-xlsx",
+      "type": "skill",
+      "name": "xlsx",
+      "category": "docs",
+      "desc": "处理 Excel 表格：公式、格式、图表与数据清洗。",
+      "repo": "anthropics/skills",
+      "url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/xlsx/SKILL.md"
+    },
+    {
+      "id": "skills-pdf",
+      "type": "skill",
+      "name": "pdf",
+      "category": "docs",
+      "desc": "提取、合并、拆分、填写与生成 PDF。",
+      "repo": "anthropics/skills",
+      "url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/pdf/SKILL.md"
+    },
+    {
+      "id": "skills-frontend-design",
+      "type": "skill",
+      "name": "frontend-design",
+      "category": "design",
+      "desc": "生成风格鲜明、可上线的前端界面。",
+      "repo": "anthropics/skills",
+      "url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/frontend-design/SKILL.md"
+    },
+    {
+      "id": "skills-canvas-design",
+      "type": "skill",
+      "name": "canvas-design",
+      "category": "design",
+      "desc": "用设计理念生成海报、视觉稿等静态作品。",
+      "repo": "anthropics/skills",
+      "url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/canvas-design/SKILL.md"
+    },
+    {
+      "id": "skills-theme-factory",
+      "type": "skill",
+      "name": "theme-factory",
+      "category": "design",
+      "desc": "为幻灯片、文档、页面套用预设主题与配色。",
+      "repo": "anthropics/skills",
+      "url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/theme-factory/SKILL.md"
+    },
+    {
+      "id": "skills-brand-guidelines",
+      "type": "skill",
+      "name": "brand-guidelines",
+      "category": "design",
+      "desc": "按品牌色与字体规范统一产出物外观。",
+      "repo": "anthropics/skills",
+      "url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/brand-guidelines/SKILL.md"
+    },
+    {
+      "id": "skills-algorithmic-art",
+      "type": "skill",
+      "name": "algorithmic-art",
+      "category": "design",
+      "desc": "用 p5.js 生成算法艺术与生成式图形。",
+      "repo": "anthropics/skills",
+      "url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/algorithmic-art/SKILL.md"
+    },
+    {
+      "id": "taste-skill-taste-skill",
+      "type": "skill",
+      "name": "taste-skill",
+      "category": "design",
+      "desc": "反套路前端技能，避免模板味的落地页与作品集。",
+      "repo": "Leonxlnx/taste-skill",
+      "url": "https://raw.githubusercontent.com/Leonxlnx/taste-skill/main/skills/taste-skill/SKILL.md"
+    },
+    {
+      "id": "skills-mcp-builder",
+      "type": "skill",
+      "name": "mcp-builder",
+      "category": "dev",
+      "desc": "构建高质量的 MCP 服务，对接外部 API。",
+      "repo": "anthropics/skills",
+      "url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/mcp-builder/SKILL.md"
+    },
+    {
+      "id": "skills-webapp-testing",
+      "type": "skill",
+      "name": "webapp-testing",
+      "category": "dev",
+      "desc": "用 Playwright 测试并调试本地 Web 应用。",
+      "repo": "anthropics/skills",
+      "url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/webapp-testing/SKILL.md"
+    },
+    {
+      "id": "skills-web-artifacts-builder",
+      "type": "skill",
+      "name": "web-artifacts-builder",
+      "category": "dev",
+      "desc": "构建多组件的 React + Tailwind HTML 作品。",
+      "repo": "anthropics/skills",
+      "url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/web-artifacts-builder/SKILL.md"
+    },
+    {
+      "id": "skills-claude-api",
+      "type": "skill",
+      "name": "claude-api",
+      "category": "dev",
+      "desc": "使用 Claude API 与 Anthropic SDK 的参考。",
+      "repo": "anthropics/skills",
+      "url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/claude-api/SKILL.md"
+    },
+    {
+      "id": "skills-skill-creator",
+      "type": "skill",
+      "name": "skill-creator",
+      "category": "dev",
+      "desc": "创建、修改并评测自己的 skill。",
+      "repo": "anthropics/skills",
+      "url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/skill-creator/SKILL.md"
+    }
+  ]
+}

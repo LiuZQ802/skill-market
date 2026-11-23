@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skill 超市</title>
+  <meta name="description" content="我的常用 Skill 市场：分类浏览，一键复制原始链接。">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // 首屏前设置主题，避免闪烁
+    (function () {
+      var t = localStorage.getItem("sm.theme");
+      if (t) document.documentElement.dataset.theme = t;
+    })();
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="./" aria-label="Skill 超市">Skill 超市</a>
+      <nav class="tabs" id="typeTabs" aria-label="内容类型"></nav>
+      <label class="search">
+        <span class="sr-only">搜索</span>
+        <input id="q" type="search" placeholder="搜索名称、描述或分类  (按 / 聚焦)" autocomplete="off">
+      </label>
+      <div class="topbar__actions">
+        <button class="btn btn--primary" id="addBtn" type="button">添加 Skill</button>
+        <button class="btn" id="moreBtn" type="button" aria-haspopup="menu" aria-expanded="false">数据</button>
+        <button class="btn btn--icon" id="themeBtn" type="button" aria-label="切换明暗主题">主题</button>
+      </div>
+      <div class="menu" id="moreMenu" role="menu" hidden>
+        <button role="menuitem" id="exportBtn" type="button">导出我的数据 (JSON)</button>
+        <button role="menuitem" id="importBtn" type="button">导入数据</button>
+        <button role="menuitem" id="resetBtn" type="button">恢复默认并清空我的修改</button>
+        <input id="importFile" type="file" accept="application/json" hidden>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="side" aria-label="分类">
+      <ul class="cats" id="cats"></ul>
+      <button class="link-btn" id="addCatBtn" type="button">新建分类</button>
+    </aside>
+
+    <main class="main">
+      <div class="main__head">
+        <h1 id="title">全部</h1>
+        <p class="muted" id="count"></p>
+      </div>
+      <div class="grid" id="grid" aria-live="polite"></div>
+      <div class="empty" id="empty" hidden>
+        <p class="empty__title">这里还没有内容</p>
+        <p class="muted">换个关键词，或者点击右上角“添加 Skill”粘贴一个 GitHub 链接。</p>
+      </div>
+    </main>
+  </div>
+
+  <!-- 添加 / 编辑 -->
+  <dialog id="dlg">
+    <form method="dialog" id="form" novalidate>
+      <h2 id="dlgTitle">添加 Skill</h2>
+
+      <div class="field">
+        <label for="fUrl">GitHub 链接</label>
+        <input id="fUrl" required placeholder="https://github.com/owner/repo/tree/main/skills/my-skill" autocomplete="off">
+        <p class="help" id="urlHelp">支持 blob / tree / raw 链接，会自动转成原始 SKILL.md 链接。</p>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="fName">名称</label>
+          <input id="fName" required autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="fCat">分类</label>
+          <select id="fCat"></select>
+        </div>
+      </div>
+
+      <div class="field" id="newCatField" hidden>
+        <label for="fNewCat">新分类名称</label>
+        <input id="fNewCat" autocomplete="off">
+      </div>
+
+      <div class="field">
+        <label for="fDesc">简介</label>
+        <textarea id="fDesc" rows="3" placeholder="一句话说明它能做什么"></textarea>
+      </div>
+
+      <p class="field-error" id="formError" role="alert" hidden></p>
+
+      <div class="dlg__actions">
+        <button class="btn" type="button" id="cancelBtn">取消</button>
+        <button class="btn btn--primary" type="submit" id="saveBtn">保存</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
