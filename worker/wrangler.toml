@@ -1,7 +1,0 @@
-name = "tool-market-counter"
-main = "worker.js"
-compatibility_date = "2025-01-01"
-
-[[kv_namespaces]]
-binding = "KV"
-id = "把 wrangler kv namespace create KV 输出的 id 填在这里"

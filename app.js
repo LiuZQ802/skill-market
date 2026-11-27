@@ -23,12 +23,12 @@
 
   /* ---------- 状态 ---------- */
   let base = { types: [], categories: [], skills: [] };
-  let globalCounts = null; // 统计服务返回的全站次数,未配置时为 null
+  let globalCounts = null; // 全站复制次数,读到之前为 null
   let user = load();
   let ui = { type: "skill", cat: ALL, q: "", editing: null, open: new Set() };
 
   function load() {
-    const empty = { added: [], overrides: {}, hidden: [], pinned: [], categories: [], types: [], counts: {} };
+    const empty = { added: [], overrides: {}, hidden: [], pinned: [], categories: [], types: [], };
     try { return { ...empty, ...JSON.parse(localStorage.getItem(STORE) || "{}") }; }
     catch { return empty; }
   }
@@ -111,17 +111,36 @@
   }
 
   /* ---------- 复制次数 ---------- */
-  const countOf = s => globalCounts ? (globalCounts[s.url] || 0) : (user.counts[s.url] || 0);
+  // 次数存放在 GitHub: 每个预置条目对应 Release 里的一个附件,下载次数即复制次数。
+  // 访客不用登录,页面里也不需要任何令牌。GitHub 更新这个数字有几分钟延迟。
+  const COUNTER = CFG.counter;
+  const CACHE_KEY = "sm.counts.v1", CACHE_MS = 5 * 60 * 1000, REPEAT_MS = 60 * 1000;
+  const lastHit = {};
+  const countOf = s => (globalCounts && globalCounts[s.id]) || 0;
   function hit(s) {
-    user.counts[s.url] = (user.counts[s.url] || 0) + 1; save();
-    if (!CFG.counterApi) return;
-    if (globalCounts) globalCounts[s.url] = (globalCounts[s.url] || 0) + 1;
-    fetch(CFG.counterApi.replace(/\/$/, "") + "/hit", { method: "POST", keepalive: true,
-      headers: { "content-type": "text/plain" }, body: JSON.stringify({ url: s.url }) }).catch(() => {});
+    // 只有线上页面才计数(本地预览不污染数据);自己添加的条目没有公共计数器
+    if (!COUNTER || location.hostname !== COUNTER.host || !base.skills.some(b => b.id === s.id)) return;
+    if (Date.now() - (lastHit[s.id] || 0) < REPEAT_MS) return; // 忽略短时间内的连续点击
+    lastHit[s.id] = Date.now();
+    fetch(`https://github.com/${COUNTER.repo}/releases/download/${COUNTER.tag}/${encodeURIComponent(s.id)}.txt`,
+      { mode: "no-cors", cache: "no-store", keepalive: true, referrerPolicy: "no-referrer" }).catch(() => {});
   }
-  function loadCounts() {
-    if (!CFG.counterApi) return;
-    fetch(CFG.counterApi.replace(/\/$/, "") + "/counts").then(r => r.json()).then(d => { globalCounts = d; render(); }).catch(() => {});
+  let countsState = "loading"; // loading | ok | error
+  async function loadCounts() {
+    if (!COUNTER) { countsState = "error"; return; }
+    let cached = null;
+    try { cached = JSON.parse(localStorage.getItem(CACHE_KEY)); } catch {}
+    if (cached?.data) { globalCounts = cached.data; countsState = "ok"; render(); }
+    if (cached && Date.now() - cached.at < CACHE_MS) return; // 匿名接口每个 IP 每小时限 60 次
+    try {
+      const r = await fetch(`https://api.github.com/repos/${COUNTER.repo}/releases/tags/${COUNTER.tag}`, { cache: "no-cache" });
+      if (!r.ok) throw new Error(r.status);
+      const { assets } = await r.json();
+      globalCounts = Object.fromEntries(assets.map(a => [a.name.replace(/\.txt$/, ""), a.download_count]));
+      countsState = "ok";
+      localStorage.setItem(CACHE_KEY, JSON.stringify({ at: Date.now(), data: globalCounts }));
+    } catch { if (!globalCounts) countsState = "error"; }
+    render();
   }
 
   /* ---------- 渲染 ---------- */
@@ -231,7 +250,7 @@
       el("div", { class: "rank__main" },
         el("a", { class: "rank__name", href: pageOf(s.url), target: "_blank", rel: "noopener noreferrer", text: s.name }),
         el("p", { class: "muted", text: s.desc || "暂无简介" }), byLine(s)),
-      el("div", { class: "rank__stat" }, el("strong", { text: String(countOf(s)) }), el("span", { class: "muted", text: "次复制" })),
+      el("div", { class: "rank__stat" }, el("strong", { text: globalCounts ? String(countOf(s)) : "-" }), el("span", { class: "muted", text: "次复制" })),
       s.stars != null ? el("div", { class: "rank__stat" }, el("strong", { text: fmtStars(s.stars) }), el("span", { class: "muted", text: "仓库 Star" })) : el("div"),
       copyBtn);
   }
@@ -241,9 +260,11 @@
     const list = leaves().filter(s => !q || [s.name, s.desc, s.repo].join(" ").toLowerCase().includes(q))
       .sort((a, b) => countOf(b) - countOf(a) || (b.stars || 0) - (a.stars || 0));
     $("#title").textContent = "排行榜";
-    $("#count").textContent = CFG.counterApi
-      ? (globalCounts ? "按所有人的复制次数排序" : "正在加载全站数据...")
-      : "目前只统计你本机的复制次数;次数相同时按仓库 Star 排序";
+    $("#count").textContent = {
+      ok: "按所有人的复制次数排序，新的点击约 10 分钟后计入",
+      loading: "正在读取全站数据...",
+      error: "暂时读不到全站数据，当前按仓库 Star 排序",
+    }[countsState];
     $("#grid").replaceChildren(el("ol", { class: "rank" }, ...list.map(rankRow)));
     $("#grid").classList.add("is-rank");
     $("#empty").hidden = list.length > 0;
@@ -402,7 +423,6 @@
         hidden: (d.hidden || []).map(String), pinned: (d.pinned || []).map(String),
         categories: (d.categories || []).filter(c => c && s(c.id) && s(c.name)).map(c => ({ id: s(c.id), name: s(c.name), type: s(c.type) || "skill" })),
         types: (d.types || []).filter(t => t && s(t.id) && s(t.name)).map(t => ({ id: s(t.id), name: s(t.name), noun: s(t.noun) || s(t.name) })),
-        counts: d.counts && typeof d.counts === "object" ? d.counts : {},
       };
       save(); render(); toast("导入成功");
     } catch { toast("导入失败:文件格式不对"); }
